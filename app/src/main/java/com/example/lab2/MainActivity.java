@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
                                 attempts++;
                                 attemptsCounterTextView.setText("Pozostało prób: " + String.valueOf(MAX_ATTEMPTS - attempts));
-                                updateHangmanImage(); // aktualizacja obrazka po nieudanej próbie
+                                updateHangmanImage(); // update image after wrong attempt
                             }
 
                             if (attempts >= MAX_ATTEMPTS) {
@@ -91,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
                             if (isWordGuessed()) {
                                 playSound(R.raw.wygrana);
                                 infoTextView.setText("Gratulacje! Odgadłeś słowo.");
-                               // checkButton.setEnabled(false);
                                 checkButton.setText("Restart gry");
                                 letterEditText.setEnabled(false);
 
@@ -167,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
         usedLetters.setText("Użyte litery: " + usedLettersString);
     }
 
-    // Metoda do aktualizacji obrazka wisielca
+    // method to updating image for hangman
     private void updateHangmanImage() {
         int imageId = getResources().getIdentifier("image" + attempts, "drawable", getPackageName());
         wisielecImage.setImageResource(imageId);
