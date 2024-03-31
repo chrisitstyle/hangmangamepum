@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/wordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Słowo: "
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/infoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"/>
+    <EditText
+        android:id="@+id/letterEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Wprowadź literę"
+        android:textSize="18sp"/>
+    <Button
+        android:id="@+id/checkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sprawdź"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/usedLettersText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Użyte litery: " />
+
+    <TextView
+        android:id="@+id/attemptsCounterTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pozostało prób: " />
+
+    <ImageView
+        android:id="@+id/wisielecImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/image0" />
+</LinearLayout>
